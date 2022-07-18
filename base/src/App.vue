@@ -7,11 +7,6 @@
     <button @click="toBar">to bar</button>
     <button @click="toSon">to son</button>
     <router-view></router-view>
-    <!-- <div>
-        <button @click="addState">add</button>
-        <button @click="minState">min</button>
-        <button @click="changeState">change</button>
-    </div> -->
 
 </template>
 <script setup>
