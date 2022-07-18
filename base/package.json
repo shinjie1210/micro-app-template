@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@micro-zoe/micro-app": "^0.8.8",
     "axios": "^0.27.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15",
