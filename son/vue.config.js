@@ -1,4 +1,5 @@
 module.exports = {
+    publicPath: '/base/son/',
     lintOnSave: false,
     devServer: {
         hot: false,
@@ -12,5 +13,17 @@ module.exports = {
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
+    },
+    chainWebpack: config => {
+        config.module
+            .rule('vue')
+            .use('vue-loader')
+            .tap(options => {
+                options.compilerOptions = {
+                    ...(options.compilerOptions || {}),
+                    isCustomElement: (tag) => /^micro-app/.test(tag),
+                };
+                return options
+            })
     },
 };

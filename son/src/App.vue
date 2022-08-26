@@ -1,11 +1,29 @@
 <template>
   <div id="nav">
     <p>子应用</p>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!-- <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> -->
+    <button @click="toHome">to home</button>
+    <button @click="toAbout">to about</button>
   </div>
   <router-view />
 </template>
+<script setup>
+import {
+  useRouter
+} from 'vue-router' //引入router
+const router = useRouter()
+function toHome() {
+  router.push({
+    path: '/'
+  })
+}
+function toAbout() {
+  router.push({
+    path: '/about'
+  })
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
