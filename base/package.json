@@ -7,7 +7,7 @@
     "email": "shinjie1210@foxmail.com"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode=dev",
     "build": "vite build",
     "preview": "vite preview"
   },

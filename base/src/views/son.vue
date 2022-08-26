@@ -15,7 +15,7 @@ import config from '../config/config.js'
 export default {
     data() {
         return {
-            url: config.son
+            url: `${config.son}/base/son/`
         }
     },
     methods: {
